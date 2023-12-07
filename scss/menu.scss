@@ -49,6 +49,7 @@ header{
 }
 
 main{
+    position: relative;
     z-index: 9999;
     margin-top: -50px;
     padding: 20px;
@@ -78,9 +79,9 @@ main{
     }
 
     .heart{
-        position: relative;
+        position: absolute;
         width: 100px;
-        left: 860px;
+        right: 10px;
 
         i{
             position: absolute;
@@ -107,167 +108,345 @@ main{
         justify-content: center;
         width: 100%;
         font-size: 20px;
-        animation: fadeIn ease 10s;
+        animation: fadeIn ease 5s;
 
-        .card{
+        .button-blanc {
             position: relative;
             display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding: 0;
+            flex-direction: row;
+            gap: 10px;
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
-            gap: .3125rem;
-            height: 4.5rem;
-            align-items: center;
-            margin-bottom: 20px;
-            
-            .info{
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                margin: 0% 0% 0% 2%;
-                height: inherit;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+            width: 100%;
+            height: 69px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            margin-bottom: 25px;
+            padding-left: 25px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.1s;
+            h4 {
+                margin-top: 10px;
+                font-size: 17px;
+                font-style: normal;
+                margin-block: 0;
+                line-height: normal;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+            p {
+                margin-block: 0;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                padding: 0px 0px 0px 5px;
-
-                h3{
-                    margin: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
-                p{
-                    margin: 0;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                }
-
+                flex: 1;
+                width: 0;
             }
-
-            .prix{
-                position: relative;
-                display: flex;
-
-                p{
-                    margin: 0;
+            span {
+                color: #353535;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .button-blanc-toggle-checkbox {
+                &:checked {
+                    + {
+                        .button-blanc-toggle {
+                            width: 13%;
+                        }
+                    }
                 }
-            }
-
-            .checkbox{
-                background-color: $third-color;
-                width: 0px;
-                margin-left: 20px;
-                height: 100%;
-                border-top-right-radius: 15px;
-                border-bottom-right-radius: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-                color: white;
-                transition: all 400ms ease-in-out;
-            }
-
-            .card:hover + .checkbox{
-                transform: translateX(-20%);
             }
         }
-    }
-}
-
-.plats{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    font-size: 20px;
-    animation: fadeIn ease 15s;
-
-    .info{
-        position: relative;
-        background-color: white;
-        border-radius: 25px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        padding: 15px;
-        margin-bottom: 20px;
+        .button-blanc-text-price {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-blanc-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .button-blanc-toggle-checkbox {
+            display: none;
+        }
+        .button-blanc-toggle {
+            width: 0;
+            overflow: hidden;
+            transition: width 0.25s linear;
+            display: flex;
+            align-items: center;
+        }
+        .button-blanc-order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $third-color;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
+        }
+        .button-blanc-order-check {
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+        .button-blanc-order-check-icon {
+            color: $third-color;
+        }
         
-
-        h3{
-            margin: 0px 0px 5px 0px;
-        }
-
-        p{
-            margin: 0;
-        }
-    }
-    
-    .prix{
-        position: absolute;
-        right: 25px;
-        bottom: 15px;
-        font-weight: 700;
-    }
-}
-
-.desserts{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    font-size: 20px;
-    animation: fadeIn ease 20s;
-
-    .info{
-        position: relative;
-        background-color: white;
-        border-radius: 25px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-        padding: 15px;
-        margin-bottom: 20px;
         
-
-        h3{
-            margin: 0px 0px 5px 0px;
-        }
-
-        p{
-            margin: 0;
-        }
     }
-    
-    .prix{
-        position: absolute;
-        right: 25px;
-        bottom: 15px;
-        font-weight: 700;
-    }
-}
-.btn-cmd{
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-    button{
-        width: 300px;
-        height: 70px;
-        color: white;
-        font-family: $font-text;
+
+
+
+    .plats{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
         font-size: 20px;
-        border: 0px;
-        border-radius: 50px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
-        background: linear-gradient(180deg, #FF79DA, #9356DC)
-        
-        
+        animation: fadeIn ease 10s;
+
+        .button-blanc {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+            width: 100%;
+            height: 69px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            margin-bottom: 25px;
+            padding-left: 25px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.1s;
+            h4 {
+                margin-top: 10px;
+                font-size: 17px;
+                font-style: normal;
+                margin-block: 0;
+                line-height: normal;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+            p {
+                margin-block: 0;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex: 1;
+                width: 0;
+            }
+            span {
+                color: #353535;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .button-blanc-toggle-checkbox {
+                &:checked {
+                    + {
+                        .button-blanc-toggle {
+                            width: 18%;
+                        }
+                    }
+                }
+            }
+        }
+        .button-blanc-text-price {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-blanc-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .button-blanc-toggle-checkbox {
+            display: none;
+        }
+        .button-blanc-toggle {
+            width: 0;
+            overflow: hidden;
+            transition: width 0.25s linear;
+            display: flex;
+            align-items: center;
+        }
+        .button-blanc-order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $third-color;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
+        }
+        .button-blanc-order-check {
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+        .button-blanc-order-check-icon {
+            color: $third-color;
+        }
+    }
+
+    .desserts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-size: 20px;
+        animation: fadeIn ease 15s;
+
+        .button-blanc {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            text-decoration: none;
+            width: 100%;
+            height: 69px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+            margin-bottom: 25px;
+            padding-left: 25px;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards 0.1s;
+            h4 {
+                margin-top: 10px;
+                font-size: 17px;
+                font-style: normal;
+                margin-block: 0;
+                line-height: normal;
+                text-overflow: ellipsis;
+                font-weight: bold;
+            }
+            p {
+                margin-block: 0;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                flex: 1;
+                width: 0;
+            }
+            span {
+                color: #353535;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+            .button-blanc-toggle-checkbox {
+                &:checked {
+                    + {
+                        .button-blanc-toggle {
+                            width: 18%;
+                        }
+                    }
+                }
+            }
+        }
+        .button-blanc-text-price {
+            display: flex;
+            justify-content: space-between;
+        }
+        .button-blanc-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .button-blanc-toggle-checkbox {
+            display: none;
+        }
+        .button-blanc-toggle {
+            width: 0;
+            overflow: hidden;
+            transition: width 0.25s linear;
+            display: flex;
+            align-items: center;
+        }
+        .button-blanc-order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $third-color;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 20px 20px 0px;
+        }
+        .button-blanc-order-check {
+            border-radius: 50%;
+            background-color: white;
+            padding: 5px;
+        }
+        .button-blanc-order-check-icon {
+            color: $third-color;
+        }
+    }
+    .btn-cmd{
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+        transition: opacity 400ms;
+        button{
+            width: 200px;
+            height: 50px;
+            color: white;
+            font-family: $font-text;
+            font-size: 15px;
+            border: 0px;
+            border-radius: 50px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+            transition: box-shadow 400ms;
+            background: linear-gradient(180deg, #FF79DA, #9356DC)
+        }
+
+        .button:hover{
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+        }
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        margin: auto;
+        margin-top: -50px;
+        width: 80%;
     }
 }
+
+
+
 
 @keyframes fadeIn {
     0% {
@@ -285,16 +464,50 @@ footer{
     background-color: #353535;
     text-align: left;
     color: white;
+    height: 100%;
     h3{
         font-family: $font-title;
         margin-left: 20px;
+
+        @media screen and (min-width: 1024px) {
+            margin: 0px 25px 5px 25px;
+        }
     }
 
     p{
         margin: 5px 5px 10px 20px;
+
+        @media screen and (min-width: 1024px) {
+            margin: 9px;                
+        }
     }
     
     i{
         padding: 0px 5px 0px 0px;
     }
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    @media screen and (min-width: 1024px) {
+        height: 100px;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+
+        .footer-1{
+            order: 4;
+        }
+        .footer-2{
+            order: 3;
+        }
+        .footer-3{
+            order: 2;
+        }
+        .footer-4{
+            order: 1;
+        }
+    }
+
 }
