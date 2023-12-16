@@ -20,16 +20,16 @@ header .logo {
   justify-content: center;
   width: 100%;
   background-color: white;
-  padding: 15px;
+  padding: 30px;
 }
 header .return-arrow {
   position: absolute;
   left: 35px;
-  top: 35px;
+  top: 40px;
 }
 header .return-arrow i {
   color: black;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .image-resto {
@@ -42,7 +42,7 @@ header .return-arrow i {
 main {
   position: relative;
   z-index: 9999;
-  margin-top: -50px;
+  margin-top: -150px;
   padding: 20px;
   width: auto;
   border-top-left-radius: 50px;
@@ -51,7 +51,7 @@ main {
 }
 main h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 40px;
+  font-size: 45px;
 }
 main .titre {
   position: relative;
@@ -61,9 +61,9 @@ main .titre::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px;
-  width: 5%;
-  height: 3px;
+  bottom: -10px;
+  width: 7%;
+  height: 7px;
   background-color: #99E2D0;
 }
 main .heart {
@@ -75,7 +75,7 @@ main .heart i {
   position: absolute;
   margin: auto;
   bottom: 40px;
-  font-size: 40px;
+  font-size: 50px;
 }
 main .heart .heart-solid {
   opacity: 0;
@@ -92,7 +92,7 @@ main .entrees {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-size: 20px;
+  font-size: 30px;
   animation: fadeIn ease 5s;
 }
 main .entrees .button-blanc {
@@ -105,7 +105,7 @@ main .entrees .button-blanc {
   border-radius: 20px;
   text-decoration: none;
   width: 100%;
-  height: 69px;
+  height: 100px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
   padding-left: 25px;
@@ -115,16 +115,18 @@ main .entrees .button-blanc {
 }
 main .entrees .button-blanc h4 {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 30px;
   font-style: normal;
   margin-block: 0;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
 main .entrees .button-blanc p {
   margin-block: 0;
-  font-size: 14px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -136,13 +138,13 @@ main .entrees .button-blanc p {
 }
 main .entrees .button-blanc span {
   color: #353535;
-  font-size: 15px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 main .entrees .button-blanc .button-blanc-toggle-checkbox:checked + .button-blanc-toggle {
-  width: 13%;
+  width: 18%;
 }
 main .entrees .button-blanc-text-price {
   display: flex;
@@ -174,8 +176,13 @@ main .entrees .button-blanc-order {
   border-radius: 0px 20px 20px 0px;
 }
 main .entrees .button-blanc-order-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: white;
+  width: 50px;
+  height: 50px;
   padding: 5px;
 }
 main .entrees .button-blanc-order-check-icon {
@@ -186,7 +193,7 @@ main .plats {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-size: 20px;
+  font-size: 30px;
   animation: fadeIn ease 10s;
 }
 main .plats .button-blanc {
@@ -199,7 +206,7 @@ main .plats .button-blanc {
   border-radius: 20px;
   text-decoration: none;
   width: 100%;
-  height: 69px;
+  height: 100px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
   padding-left: 25px;
@@ -209,16 +216,18 @@ main .plats .button-blanc {
 }
 main .plats .button-blanc h4 {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 30px;
   font-style: normal;
   margin-block: 0;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
 main .plats .button-blanc p {
   margin-block: 0;
-  font-size: 14px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -230,7 +239,7 @@ main .plats .button-blanc p {
 }
 main .plats .button-blanc span {
   color: #353535;
-  font-size: 15px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -268,8 +277,13 @@ main .plats .button-blanc-order {
   border-radius: 0px 20px 20px 0px;
 }
 main .plats .button-blanc-order-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: white;
+  width: 50px;
+  height: 50px;
   padding: 5px;
 }
 main .plats .button-blanc-order-check-icon {
@@ -280,7 +294,7 @@ main .desserts {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  font-size: 20px;
+  font-size: 30px;
   animation: fadeIn ease 15s;
 }
 main .desserts .button-blanc {
@@ -293,7 +307,7 @@ main .desserts .button-blanc {
   border-radius: 20px;
   text-decoration: none;
   width: 100%;
-  height: 69px;
+  height: 100px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
   margin-bottom: 25px;
   padding-left: 25px;
@@ -303,16 +317,18 @@ main .desserts .button-blanc {
 }
 main .desserts .button-blanc h4 {
   margin-top: 10px;
-  font-size: 17px;
+  font-size: 30px;
   font-style: normal;
   margin-block: 0;
   line-height: normal;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
   font-weight: bold;
 }
 main .desserts .button-blanc p {
   margin-block: 0;
-  font-size: 14px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -324,7 +340,7 @@ main .desserts .button-blanc p {
 }
 main .desserts .button-blanc span {
   color: #353535;
-  font-size: 15px;
+  font-size: 25px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -362,8 +378,13 @@ main .desserts .button-blanc-order {
   border-radius: 0px 20px 20px 0px;
 }
 main .desserts .button-blanc-order-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   background-color: white;
+  width: 50px;
+  height: 50px;
   padding: 5px;
 }
 main .desserts .button-blanc-order-check-icon {
@@ -376,11 +397,11 @@ main .btn-cmd {
   transition: opacity 400ms;
 }
 main .btn-cmd button {
-  width: 200px;
-  height: 50px;
+  width: 300px;
+  height: 70px;
   color: white;
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: 23px;
   border: 0px;
   border-radius: 50px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
@@ -416,9 +437,12 @@ footer {
   text-align: left;
   color: white;
   height: 100%;
+  padding-left: 15px;
+  padding-bottom: 30px;
 }
 footer h3 {
   font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
   margin-left: 20px;
 }
 @media screen and (min-width: 1024px) {
@@ -428,6 +452,7 @@ footer h3 {
 }
 footer p {
   margin: 5px 5px 10px 20px;
+  font-size: 25px;
 }
 @media screen and (min-width: 1024px) {
   footer p {
