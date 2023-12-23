@@ -458,6 +458,7 @@ footer h3 {
 }
 @media screen and (min-width: 1024px) {
   footer h3 {
+    font-size: 20px;
     margin: 0px 25px 5px 25px;
   }
 }
@@ -467,6 +468,7 @@ footer p {
 }
 @media screen and (min-width: 1024px) {
   footer p {
+    font-size: 15px;
     margin: 9px;
   }
 }
