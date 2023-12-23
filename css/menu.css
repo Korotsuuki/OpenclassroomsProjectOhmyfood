@@ -38,6 +38,11 @@ header .return-arrow i {
   position: relative;
   z-index: -1;
 }
+@media screen and (min-width: 1024px) {
+  .image-resto {
+    height: 400px;
+  }
+}
 
 main {
   position: relative;
@@ -114,14 +119,16 @@ main .entrees .button-blanc {
   animation: fadeIn 0.5s ease forwards 0.1s;
 }
 main .entrees .button-blanc h4 {
+  max-width: 70%;
   margin-top: 10px;
+  font-family: "Roboto", sans-serif;
   font-size: 30px;
   font-style: normal;
   margin-block: 0;
   line-height: normal;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   font-weight: bold;
 }
 main .entrees .button-blanc p {
@@ -215,6 +222,7 @@ main .plats .button-blanc {
   animation: fadeIn 0.5s ease forwards 0.1s;
 }
 main .plats .button-blanc h4 {
+  max-width: 70%;
   margin-top: 10px;
   font-size: 30px;
   font-style: normal;
@@ -316,6 +324,7 @@ main .desserts .button-blanc {
   animation: fadeIn 0.5s ease forwards 0.1s;
 }
 main .desserts .button-blanc h4 {
+  max-width: 70%;
   margin-top: 10px;
   font-size: 30px;
   font-style: normal;
@@ -419,6 +428,8 @@ main .btn-cmd:hover {
     margin: auto;
     margin-top: -50px;
     width: 80%;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
 
@@ -460,7 +471,7 @@ footer p {
   }
 }
 footer i {
-  padding: 0px 5px 0px 0px;
+  width: 30px;
 }
 footer a {
   text-decoration: none;

@@ -46,6 +46,10 @@ header{
     height: 700px;
     position: relative;
     z-index: -1;
+
+    @media screen and (min-width: 1024px) {
+        height: 400px;     
+    }
 }
 
 main{
@@ -128,14 +132,16 @@ main{
             opacity: 0;
             animation: fadeIn 0.5s ease forwards 0.1s;
             h4 {
+                max-width: 70%;
                 margin-top: 10px;
+                font-family: $font-text;
                 font-size: 30px;
                 font-style: normal;
                 margin-block: 0;
                 line-height: normal;
-                white-space: nowrap;
-                overflow: hidden;
                 text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
                 font-weight: bold;
             }
             p {
@@ -241,6 +247,7 @@ main{
             opacity: 0;
             animation: fadeIn 0.5s ease forwards 0.1s;
             h4 {
+                max-width: 70%;
                 margin-top: 10px;
                 font-size: 30px;
                 font-style: normal;
@@ -350,6 +357,7 @@ main{
             opacity: 0;
             animation: fadeIn 0.5s ease forwards 0.1s;
             h4 {
+                max-width: 70%;
                 margin-top: 10px;
                 font-size: 30px;
                 font-style: normal;
@@ -463,6 +471,8 @@ main{
         margin: auto;
         margin-top: -50px;
         width: 80%;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 }
 
@@ -508,7 +518,7 @@ footer{
     }
     
     i{
-        padding: 0px 5px 0px 0px;
+        width: 30px;
     }
 
     a{
