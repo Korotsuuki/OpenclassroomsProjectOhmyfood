@@ -74,10 +74,24 @@ header .loc {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 80px;
   background-color: #EAEAEA;
   gap: 15px;
-  font-weight: 500;
+  padding-left: 150px;
+}
+header .loc label {
+  color: #353535;
   font-size: 30px;
+}
+header .loc input {
+  border: 0px;
+  background-color: #EAEAEA;
+  height: 25px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  color: #353535;
+  size: 100;
 }
 @media screen and (min-width: 1024px) {
   header .loc {
